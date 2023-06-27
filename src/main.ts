@@ -15,11 +15,11 @@ async function bootstrap() {
   SwaggerModule.setup('swagger', app, document);
 
   app.enableCors({
-    methods: ['GET', 'OPTIONS', 'POST'],
+    methods: ['GET', 'OPTIONS', 'POST', 'PATCH', 'DELETE'],
     origin: '*',
   });
 
-  await app.listen(5000);
+  await app.listen(process.env.PORT || 3000);
 }
 
 bootstrap();
