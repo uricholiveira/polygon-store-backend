@@ -21,6 +21,9 @@ export class ProductService {
         },
         variants: true,
       },
+      orderBy: {
+        id: 'asc',
+      },
     });
   }
 
